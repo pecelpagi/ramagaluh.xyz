@@ -4,5 +4,5 @@ import Home from "./page";
 
 test("renders heading", () => {
   render(<Home />);
-  expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Home");
+  expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Hello!");
 });

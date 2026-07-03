@@ -2,24 +2,28 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const pathname = usePathname();
   const navLinks = [
-    { href: "/", label: "Home" },
+    { href: "/", label: "Intro" },
     { href: "/about", label: "About" },
-    { href: "/portfolio", label: "Portfolio" },
-    { href: "/blog", label: "Blog Posts" },
+    { href: "/projects", label: "Projects" },
+    { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contact" },
   ];
 
   return (
-    <nav className="flex gap-6 py-4 border-b">
+    <nav className="flex font-medium text-sm rounded-full ring-1 px-3 ring-zinc-900/5 backdrop-blur shadow-lg shadow-zinc-800/5">
       {navLinks.map((link) => (
         <Link
           key={link.href}
           href={link.href}
-          className={pathname === link.href ? "font-bold" : ""}
+          className={cn(
+            "px-3 py-2",
+            pathname === link.href && "text-[#007bff]",
+          )}
         >
           {link.label}
         </Link>

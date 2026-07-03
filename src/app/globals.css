@@ -1,3 +1,89 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    color: #444452;
+}
+
+.intro {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.emoji {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    vertical-align: text-top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    5% {
+        -webkit-transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+        transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+    }
+
+    10% {
+        -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
+    }
+
+    15% {
+        -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+    }
+
+    20% {
+        -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+    }
+
+    25% {
+        -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+    }
+
+    33% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.intro__hello .wave-hand.animated {
+    animation: wave 3s ease-in-out infinite;
+}
+
+.emoji.wave-hand {
+    background-image: url("/img/wave.png");
+}
+
+.emoji.technologist {
+    background-image: url("/img/technologist.png");
+}
+
+.highlight-link {
+    -webkit-box-shadow: inset 0 -3px 0 #007bff;
+    box-shadow: inset 0 -3px 0 #007bff;
+    padding: 8px 4px;
+    color: inherit;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.highlight-link:hover {
+    background-color: #007bff;
+    color: #FFFFFF;
+    -webkit-box-shadow: inset 0 -33px 0 0 #007bff;
+    box-shadow: inset 0 -33px 0 0 #007bff;
+}
