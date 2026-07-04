@@ -16,18 +16,25 @@ export default function Navbar() {
 
   return (
     <nav className="flex font-medium text-sm rounded-full ring-1 px-3 ring-zinc-900/5 backdrop-blur shadow-lg shadow-zinc-800/5">
-      {navLinks.map((link) => (
-        <Link
-          key={link.href}
-          href={link.href}
-          className={cn(
-            "px-3 py-2",
-            pathname === link.href && "text-[#007bff]",
-          )}
-        >
-          {link.label}
-        </Link>
-      ))}
+      {navLinks.map((link) => {
+        const isActive =
+          link.href === "/"
+            ? pathname === link.href
+            : pathname === link.href || pathname.startsWith(`${link.href}/`);
+
+        return (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={cn(
+              "px-3 py-2 hover:text-[#007bff]",
+              isActive && "text-[#007bff]",
+            )}
+          >
+            {link.label}
+          </Link>
+        );
+      })}
     </nav>
   );
 }
