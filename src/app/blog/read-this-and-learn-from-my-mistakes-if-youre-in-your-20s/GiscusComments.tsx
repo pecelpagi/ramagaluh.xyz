@@ -2,6 +2,33 @@
 
 import { useEffect, useRef } from "react";
 
+const GISCUS_ORIGIN = "https://giscus.app";
+const LIGHT_THEME = "light";
+const DARK_THEME = "dark_dimmed";
+
+function getGiscusTheme() {
+  return document.documentElement.classList.contains("dark")
+    ? DARK_THEME
+    : LIGHT_THEME;
+}
+
+function updateGiscusTheme(theme: string) {
+  const iframe = document.querySelector<HTMLIFrameElement>(
+    "iframe.giscus-frame",
+  );
+
+  iframe?.contentWindow?.postMessage(
+    {
+      giscus: {
+        setConfig: {
+          theme,
+        },
+      },
+    },
+    GISCUS_ORIGIN,
+  );
+}
+
 export default function GiscusComments() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -25,12 +52,22 @@ export default function GiscusComments() {
     script.setAttribute("data-reactions-enabled", "1");
     script.setAttribute("data-emit-metadata", "1");
     script.setAttribute("data-input-position", "top");
-    script.setAttribute("data-theme", "light");
+    script.setAttribute("data-theme", getGiscusTheme());
     script.setAttribute("data-lang", "en");
 
     container.appendChild(script);
 
+    const observer = new MutationObserver(() => {
+      updateGiscusTheme(getGiscusTheme());
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
     return () => {
+      observer.disconnect();
       container.innerHTML = "";
     };
   }, []);
