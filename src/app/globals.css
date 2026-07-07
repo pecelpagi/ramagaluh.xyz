@@ -328,3 +328,11 @@ html.dark {
     background:
         radial-gradient(circle, currentColor 0.15rem, transparent 0.16rem) center / 1rem 0.75rem repeat-x;
 }
+
+.giscus {
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    max-width: 48rem;
+    position: relative;
+    padding: 0 1rem;
+}

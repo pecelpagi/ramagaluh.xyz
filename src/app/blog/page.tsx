@@ -55,7 +55,9 @@ export default function Blog() {
               className="group flex flex-col grow p-4 transition-colors duration-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/40 md:rounded-md"
             >
               <div className="block md:hidden mb-4">
-                <p className="text-sm font-normal">{post.date}</p>
+                <p className="text-sm font-normal">
+                  {formatLongDate(post.date)}
+                </p>
               </div>
               <h2 className="text-[18px] font-bold">{post.title}</h2>
               <p className="text-sm mt-2 font-normal text-muted-foreground">
