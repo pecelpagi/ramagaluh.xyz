@@ -1,4 +1,32 @@
-"use client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact — Galuh Muhamad Ramadhan",
+  description:
+    "Contact Galuh Muhamad Ramadhan for software engineering opportunities, product collaboration, consulting, or professional conversations.",
+  keywords: [
+    "Contact Galuh Ramadhan",
+    "software engineer contact",
+    "web developer contact",
+    "product collaboration",
+    "frontend developer contact",
+    "backend developer contact",
+    "consulting",
+    "hire software developer",
+  ],
+  openGraph: {
+    title: "Contact — Galuh Muhamad Ramadhan",
+    description:
+      "Get in touch with Galuh Muhamad Ramadhan for collaboration, engineering opportunities, and product-focused work.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Contact — Galuh Muhamad Ramadhan",
+    description:
+      "Get in touch with Galuh Muhamad Ramadhan for collaboration, engineering opportunities, and product-focused work.",
+  },
+};
 
 const contact_data = [
   {
@@ -25,12 +53,12 @@ const contact_data = [
 
 export default function Contact() {
   return (
-    <div className="py-24 flex flex-col gap-10">
+    <div className="px-4 py-24 flex flex-col gap-10">
       <div className="flex flex-col gap-6">
         <h1 className="text-4xl font-bold">Contact.</h1>
         <p>Get in touch with me for any questions or collaborations.</p>
       </div>
-      <div className="grid grid-cols-2 gap-[32px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px]">
         {contact_data.map((item) => (
           <div key={item.title} className="flex flex-col gap-2">
             <p className="text-[14px] font-normal">{item.title}</p>

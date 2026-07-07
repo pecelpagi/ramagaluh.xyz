@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="py-24 flex flex-col gap-6 max-w-3xl">
-      <div className="text-sm font-normal text-gray-500">2026-01-01</div>
+    <div className="px-4 py-24 flex flex-col gap-6 max-w-3xl">
+      <div className="text-sm font-normal text-muted-foreground">2026-01-01</div>
       <h1 className="text-4xl font-bold">
         Building Modern Web Apps with Next.js
       </h1>
-      <div className="text-base font-normal text-gray-700 space-y-4">
+      <div className="text-base font-normal space-y-4">
         <p>
           In today's fast-paced digital world, building scalable and
           maintainable web applications is more important than ever. Next.js has
