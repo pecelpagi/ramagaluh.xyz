@@ -41,7 +41,7 @@ export default function Home() {
         <span className="emoji technologist"></span>
       </p>
       <p className="text-[20px] font-normal">
-        <a href="#" className="highlight-link">
+        <a href="/cv/galuh-resume.pdf" className="highlight-link">
           Download resume .pdf
         </a>
       </p>
