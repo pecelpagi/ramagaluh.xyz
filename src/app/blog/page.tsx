@@ -54,7 +54,10 @@ export default function Blog() {
             </div>
             <a
               href={`/blog/${key}`}
-              className="group flex flex-col grow p-4 transition-colors duration-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/40 md:rounded-md"
+              className={cn(
+                `group flex flex-col grow p-4 transition-colors duration-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/40 md:rounded-md`,
+                contentPaddingX,
+              )}
             >
               <div className="block md:hidden mb-4">
                 <p className="text-sm font-normal">
