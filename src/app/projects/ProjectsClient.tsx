@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 type Project = {
@@ -71,6 +72,11 @@ const projects_data: Project[] = [
 export default function ProjectsClient() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
+  const handlePrefetch = (imageUrl: string) => {
+    const img = window.document.createElement("img");
+    img.src = imageUrl;
+  };
+
   return (
     <div className="px-4 py-24 flex flex-col gap-10">
       <div className="flex flex-col gap-6">
@@ -84,6 +90,7 @@ export default function ProjectsClient() {
         {projects_data.map((project) => (
           <div
             key={project.title}
+            onMouseEnter={() => handlePrefetch(project.imageUrl)}
             onClick={() => setSelectedProject(project)}
             className="project-card group flex flex-col gap-2 border border-border bg-card p-4 cursor-pointer transition-all duration-300 hover:border-[#007bff] hover:shadow-[0px_0px_10px_0px_rgba(66,133,245,0.24)]"
           >
@@ -125,9 +132,13 @@ export default function ProjectsClient() {
               rel="noopener noreferrer"
               className="cursor-pointer block"
             >
-              <img
+              <Image
                 src={selectedProject.imageUrl || ""}
                 alt={selectedProject.title || ""}
+                width={1440}
+                height={900}
+                priority
+                sizes="100vw"
                 className="h-full max-h-[80vh] w-auto max-w-full rounded-md"
               />
             </a>

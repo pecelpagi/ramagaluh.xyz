@@ -73,6 +73,7 @@ export default function About() {
           alt="Galuh Muhamad Ramadhan"
           width={400}
           height={300}
+          priority
           className="rounded-xl w-full max-w-[300px] h-auto rotate-3"
         />
       </div>
