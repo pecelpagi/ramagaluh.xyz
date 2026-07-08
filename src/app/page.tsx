@@ -1,3 +1,5 @@
+import { contentPaddingX } from "@/lib/layout-padding";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,7 +32,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="px-4 py-20 md:py-24 intro flex flex-col gap-8">
+    <div
+      className={cn(
+        contentPaddingX,
+        `py-20 md:py-24 intro flex flex-col gap-8`,
+      )}
+    >
       <h1 className="intro__hello">
         Hello! <span className="emoji wave-hand animated"></span>
       </h1>

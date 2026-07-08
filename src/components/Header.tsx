@@ -5,6 +5,8 @@ import SunClearLine from "@/assets/icons/sun-line.svg";
 import MoonClearLine from "@/assets/icons/moon-clear-line.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { contentPaddingX } from "@/lib/layout-padding";
+import { cn } from "@/lib/utils";
 
 const THEME_COOKIE_KEY = "theme";
 const HEADER_RESET_SCROLL_Y = 80;
@@ -92,7 +94,7 @@ export default function Header({ initialIsDarkMode }: HeaderProps) {
 
   return (
     <>
-      <div className="relative max-w-4xl px-4 py-8 mx-auto">
+      <div className={cn("relative max-w-4xl py-8 mx-auto", contentPaddingX)}>
         <div className="flex items-center justify-between min-h-10">
           {!isFixed && (
             <HeaderBar
@@ -123,7 +125,12 @@ export default function Header({ initialIsDarkMode }: HeaderProps) {
             }}
             className="fixed top-0 left-0 right-0 z-50"
           >
-            <div className="flex items-center justify-between max-w-4xl px-4 py-8 mx-auto">
+            <div
+              className={cn(
+                "flex items-center justify-between max-w-4xl mx-auto py-8",
+                contentPaddingX,
+              )}
+            >
               <HeaderBar
                 isDarkMode={isDarkMode}
                 onToggleDarkMode={toggleDarkMode}

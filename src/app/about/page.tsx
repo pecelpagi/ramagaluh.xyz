@@ -1,3 +1,5 @@
+import { contentPaddingX } from "@/lib/layout-padding";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -31,7 +33,12 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="px-4 py-20 md:py-24 flex flex-col md:flex-row gap-10 items-center">
+    <div
+      className={cn(
+        contentPaddingX,
+        `py-20 md:py-24 flex flex-col md:flex-row gap-10 items-center`,
+      )}
+    >
       <div className="flex grow-2 flex-col gap-6">
         <h1 className="text-4xl font-bold">About</h1>
         <div className="flex flex-col gap-5">

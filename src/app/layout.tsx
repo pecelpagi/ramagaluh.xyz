@@ -29,6 +29,7 @@ export default async function RootLayout({
       <body className={`antialiased font-sans`}>
         <Header initialIsDarkMode={isDarkMode} />
         <div className="max-w-4xl mx-auto">{children}</div>
+        <div className="px-4 sm:px-8 lg:px-12">&nbsp;</div>
       </body>
     </html>
   );

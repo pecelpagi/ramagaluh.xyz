@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { blogPosts } from "@/content/blog-posts";
 import { formatLongDate } from "@/lib/date";
+import { contentPaddingX } from "@/lib/layout-padding";
+import { cn } from "@/lib/utils";
 
 const postEntries = Object.entries(blogPosts) as Array<
   [keyof typeof blogPosts, (typeof blogPosts)[keyof typeof blogPosts]]
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
 export default function Blog() {
   return (
     <div className="py-24 flex flex-col gap-10">
-      <div className="flex flex-col gap-6 px-4 ">
+      <div className={cn(contentPaddingX, `flex flex-col gap-6`)}>
         <h1 className="text-4xl font-bold">Blog.</h1>
         <p>Read my latest blog posts.</p>
         {/* <p>A collection of thoughts on software, products, life, and learning.</p> */}
@@ -45,7 +47,7 @@ export default function Blog() {
       <div className="flex flex-col gap-6 space-y-6">
         {postEntries.map(([key, post]) => (
           <div key={key} className="flex flex-col md:flex-row md:gap-20">
-            <div className="hidden md:block px-4 py-5">
+            <div className={cn("hidden md:block py-5", contentPaddingX)}>
               <p className="text-sm font-normal text-nowrap">
                 {formatLongDate(post.date)}
               </p>

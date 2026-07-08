@@ -1,3 +1,5 @@
+import { contentPaddingX } from "@/lib/layout-padding";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -53,7 +55,7 @@ const contact_data = [
 
 export default function Contact() {
   return (
-    <div className="px-4 py-24 flex flex-col gap-10">
+    <div className={cn(contentPaddingX, `py-24 flex flex-col gap-10`)}>
       <div className="flex flex-col gap-6">
         <h1 className="text-4xl font-bold">Contact.</h1>
         <p>Get in touch with me for any questions or collaborations.</p>

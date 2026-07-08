@@ -1,5 +1,7 @@
 "use client";
 
+import { contentPaddingX } from "@/lib/layout-padding";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -73,7 +75,7 @@ export default function ProjectsClient() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <div className="px-4 py-24 flex flex-col gap-10">
+    <div className={cn(contentPaddingX, `py-24 flex flex-col gap-10`)}>
       <div className="flex flex-col gap-6">
         <h1 className="text-4xl font-bold">Projects.</h1>
         <p>
@@ -81,7 +83,7 @@ export default function ProjectsClient() {
           opportunity to work on.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[32px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px]">
         {projects_data.map((project) => (
           <div
             key={project.title}

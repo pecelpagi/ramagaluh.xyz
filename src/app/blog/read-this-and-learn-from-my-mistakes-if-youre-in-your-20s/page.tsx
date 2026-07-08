@@ -6,6 +6,8 @@ import { remark } from "remark";
 import html from "remark-html";
 import { formatLongDate } from "@/lib/date";
 import GiscusComments from "./GiscusComments";
+import { contentPaddingX } from "@/lib/layout-padding";
+import { cn } from "@/lib/utils";
 
 const slug = "read-this-and-learn-from-my-mistakes-if-youre-in-your-20s";
 
@@ -42,7 +44,12 @@ export default async function Page() {
   const contentHtml = applySizedImageSyntax(processedContent.toString());
 
   return (
-    <div className="px-4 pt-24 mx-auto max-w-3xl flex flex-col gap-4">
+    <div
+      className={cn(
+        contentPaddingX,
+        `pt-24 mx-auto max-w-3xl flex flex-col gap-4`,
+      )}
+    >
       <time dateTime={blogPosts[slug].date}>
         <span className="text-sm text-muted-foreground">
           {formatLongDate(blogPosts[slug].date)}
