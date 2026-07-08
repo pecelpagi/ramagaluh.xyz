@@ -26,8 +26,9 @@ export default async function RootLayout({
       lang="en"
       className={cn("font-sans", geist.variable, isDarkMode && "dark")}
     >
-      <body className={`antialiased font-sans max-w-4xl mx-auto`}>
-        <Header initialIsDarkMode={isDarkMode} /> {children}
+      <body className={`antialiased font-sans`}>
+        <Header initialIsDarkMode={isDarkMode} />
+        <div className="max-w-4xl mx-auto">{children}</div>
       </body>
     </html>
   );

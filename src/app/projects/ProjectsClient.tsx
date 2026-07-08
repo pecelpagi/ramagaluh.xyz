@@ -72,11 +72,6 @@ const projects_data: Project[] = [
 export default function ProjectsClient() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const handlePrefetch = (imageUrl: string) => {
-    const img = window.document.createElement("img");
-    img.src = imageUrl;
-  };
-
   return (
     <div className="px-4 py-24 flex flex-col gap-10">
       <div className="flex flex-col gap-6">
@@ -90,18 +85,28 @@ export default function ProjectsClient() {
         {projects_data.map((project) => (
           <div
             key={project.title}
-            onMouseEnter={() => handlePrefetch(project.imageUrl)}
             onClick={() => setSelectedProject(project)}
             className="project-card group flex flex-col gap-2 border border-border bg-card p-4 cursor-pointer transition-all duration-300 hover:border-[#007bff] hover:shadow-[0px_0px_10px_0px_rgba(66,133,245,0.24)]"
           >
-            <div className="grow flex flex-col gap-[16px] min-h-[150px]">
+            <div className="grow flex flex-col gap-[16px]">
               <h2 className="text-[18px] font-semibold">{project.title}</h2>
               <p className="text-[14px] font-normal">{project.description}</p>
             </div>
             <div>
+              <div className="min-h-[150px]">
+                <Image
+                  src={project.imageUrl || ""}
+                  alt={project.title || ""}
+                  width={1440}
+                  height={900}
+                  priority
+                  sizes="100vw"
+                  className="h-auto w-full"
+                />
+              </div>
               <button
                 type="button"
-                className="view-project-btn text-[12px] group-hover:text-[#007bff]"
+                className="view-project-btn text-[12px] group-hover:text-[#007bff] mt-[14px]"
               >
                 View Project
               </button>

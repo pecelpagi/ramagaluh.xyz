@@ -99,6 +99,16 @@ html {
     color-scheme: light;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative
+}
+
+
 html.dark {
     color-scheme: dark;
 }
