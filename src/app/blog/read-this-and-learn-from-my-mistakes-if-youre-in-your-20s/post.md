@@ -6,7 +6,7 @@ I turn 30 this September. As that milestone approaches, I've been reflecting a l
 
 Right now, I'm unemployed. It's been three months since I left my previous job after struggling with burnout, stress, and declining performance. Stepping away wasn't easy, but it gave me something I desperately needed: space to think.
 
-I've been coding for more than 10 years, and I've reached a point where I feel like my career isn't going anywhere. I've been stuck in the same position for years. My most recent salary was still under $800 a month, even after all those years. This period of unemployment has given me time to reflect on my life, make peace with my past regrets, and recognize the mistakes that have kept my career from truly moving forward.
+I've been coding for over 10 years now, and I've reached a point where it feels like my career just isn't moving forward. I've been stuck in the same position for years, and my last salary was even under $800 a month. This period of unemployment, though, has given me time to reflect on my life — to make peace with past regrets and recognize the mistakes that have held my career back from truly progressing.
 
 Although these realizations were difficult to face, I am grateful for everything that has happened, because it has taught me many valuable lessons, even if it took me a long time to accept them. Here are the mistakes I'd like to share with you so you don't have to go through the same experience yourself:
 
@@ -32,7 +32,7 @@ Hopefully I can give a tech talk at the AWS community someday. I'm still prepari
 
 ## Lack of Communication Skills
 
-Public speaking is the number one fear for most people, including me. My career was stuck because I didn't have good communication skills. The reason was that I'd been afraid of being judged, and eventually I realized nobody escapes being judged by others. So there's really no point being scared of it. Break through it.
+Public speaking is the number one fear for most people, including me. My career was stuck because I didn't have good communication skills. The reason was that I'd been afraid of being judged, and eventually I realized nobody escapes being judged by others. So there's really no point being scared of it. Push through it.
 
 In the end, the person who rises to the top is the one who's skilled in communication. However good your skills are, if you don't have good communication skills, you'll go unnoticed.
 
@@ -44,7 +44,7 @@ For a long time, I thought good communication came naturally. I was wrong; it's 
 
 For years, I spent countless hours scrolling, comparing myself to others, chasing entertainment, and seeking validation through likes and engagement.
 
-Looking back, here's what I'd tell myself: stop chasing validation. Stop scrolling through social media. Go for a morning run and skip the Instagram story. Travel somewhere and just be there, without documenting it for everyone else to see. Most people care far less about what you post than you think — that's the truth.
+Looking back, here's what I'd tell myself: stop chasing validation. Stop scrolling through social media. Go for a morning run and skip the Instagram story. Travel somewhere and just be there, without documenting it for everyone else to see. The truth is, nobody is paying as much attention to your posts as you think they are.
 
 Chasing "likes" is addictive, and that addiction quietly eats into your productivity. I'm not saying you need to delete your accounts, but you do need to control yourself and cut down the time you spend on them as much as you can.
 
